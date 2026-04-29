@@ -1,44 +1,74 @@
-# proyecto2-analisis-python-g8
-_Procesamiento y limpieza de datos con Python_
+# 📊Procesamiento y Limpieza de Datos con Python
 
-Resumen
-Este proyecto realiza un proceso completo de Data Wrangling y Análisis Exploratorio de Datos (EDA) sobre el conjunto de datos de préstamos de Kiva. El objetivo es limpiar, transformar y visualizar los datos para entender cómo se distribuyen los microcréditos a nivel global, con un enfoque especial en la inclusión financiera por género y sectores económicos.
+📝 _Resumen_
 
-Pipeline de Datos
-El flujo de trabajo aplicado en este notebook sigue los siguientes pasos:
+Este proyecto aborda un proceso completo de Data Wrangling y Análisis Exploratorio de Datos (EDA) sobre el dataset de préstamos de Kiva.
 
-Carga y Snapshot: Importación de datos y respaldo del dataset original.
+El objetivo principal es limpiar, transformar y analizar los datos para entender la distribución de los microcréditos a nivel global, con especial foco en:
 
-- Limpieza Técnica: * Conversión de tipos (fechas a datetime, montos a numeric).
+Inclusión financiera
+Distribución por género
+Sectores económicos
 
-- Tratamiento de valores nulos y eliminación de duplicados.
+⚙️ _Pipeline de Datos_
 
-- Normalización de textos (países y sectores en minúsculas y sin espacios).
+El flujo de trabajo implementado en el notebook sigue las siguientes etapas:
 
-- Ingeniería de Características (Feature Engineering):
+1. Carga y Snapshot
+Importación del dataset
+Creación de una copia de respaldo para preservar los datos originales
+2. Limpieza Técnica
+Conversión de tipos de datos:
+Fechas → datetime
+Montos → numeric
+Tratamiento de valores nulos
+Eliminación de registros duplicados
+Normalización de texto:
+Conversión a minúsculas
+Eliminación de espacios innecesarios
+3. Ingeniería de Características (Feature Engineering)
+Creación de rangos de préstamo:
+Bajo
+Medio
+Alto
+Discretización de variables numéricas
+Formateo de moneda para mejorar la visualización
+4. Tratamiento de Outliers
+Identificación de valores atípicos mediante el método de Rango Intercuartílico (IQR)
+Ajuste o eliminación según criterio analítico
+5. Visualización de Datos
+Gráficos utilizados:
+Barras
+Histogramas
+Diagramas de caja (boxplots)
+Análisis visual para detectar patrones y tendencias
 
-- Creación de Rangos de Préstamo (Bajo, Medio, Alto) mediante discretización.
+🔍 _Hallazgos Principales_
 
-- Formateo de moneda para visualización.
+1. Enfoque de Género
 
-- Tratamiento de Outliers: Identificación y gestión de valores atípicos mediante el método de Rango Intercuartílico (IQR).
+Se observa una alta participación de mujeres en los préstamos, lo que refleja el enfoque de inclusión financiera del modelo de microcréditos.
 
-- Visualización: Creación de gráficos de barras, histogramas y diagramas de caja para interpretar tendencias.
-- 
+2. Distribución del Capital
 
-_Hallazgos Principales_
-1.- Enfoque de Género: Se observa una presencia dominante de mujeres en el dataset, alineado con la misión de empoderamiento de Kiva.
+La mayoría de los préstamos se concentran en el rango “Bajo”, confirmando la naturaleza de microfinanciación.
 
-2.- Distribución de Capital: La mayoría de los préstamos se concentran en el rango "Bajo", lo que confirma la naturaleza de "microcrédito" de la plataforma.
+3. Distribución Geográfica
 
-Países Clave: La mayoría de los préstamos se concentran en África y Ásia. 
+Los préstamos se concentran principalmente en:
 
-_Tecnologías Utilizadas_
+África
+Asia
+
+🛠️ _Tecnologías Utilizadas_
 
 Python 3.12
+Pandas → Manipulación y limpieza de datos
+Matplotlib & Seaborn → Visualización de datos
+Google Colab → Entorno de desarrollo en la nube
 
-Pandas: Manipulación y limpieza de datos.
+🚀 _Posibles Mejoras_
 
-Seaborn & Matplotlib: Visualización estática de datos.
-
-Google Colab: Entorno de ejecución en la nube.
+Incorporar análisis temporal (evolución de préstamos en el tiempo)
+Crear dashboards interactivos (Power BI / Tableau)
+Aplicar modelos predictivos para estimar comportamiento de préstamos
